@@ -53,10 +53,11 @@ export default function CheckOutPage() {
         selectedDeliveryOption={selectedDeliveryOption}
         setSelectedDeleveryOption={setSelectedDeliveryOption}
       />
+      <PaymentMethod paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod} />
       <OrderSummery
+        paymentMethod={paymentMethod}
         deliveryCost={selectedDeliveryOption?.cost}
       />
-      <PaymentMethod paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod} />
       <Button
         onClick={() => placeOrder(order)}
         text={isLoading ? "অপেক্ষা করুন..." : "অর্ডার করুন"}
