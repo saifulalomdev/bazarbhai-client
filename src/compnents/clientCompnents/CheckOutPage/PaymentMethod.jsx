@@ -23,7 +23,7 @@ export default function PaymentMethod({ paymentMethod, setPaymentMethod }) {
 
                         {/* show which one selected */}
                         {item.name === paymentMethod &&
-                            <div className="absolute w-5 h-5 p-1 right-2 top-2 rounded-full border border-orange-500">
+                            <div className="absolute w-5 h-5 p-0.5 right-2 top-2 rounded-full border border-orange-500">
                                 <div style={{ background: item?.textColour }} className="w-full h-full rounded-full"></div>
                             </div>
                         }
