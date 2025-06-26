@@ -10,7 +10,6 @@ export default function OrderList() {
   const [page, setPage] = useState(1)
   const { error, isLoading, data } = useOrders(page)
 
-  if (isLoading) return <Loader />
   if (error) throw new Error(error)
 
   if (!localStorage.getItem("token")) return <Navigate to="/" />
@@ -30,6 +29,8 @@ export default function OrderList() {
       {data?.orders?.length > 0 ? data?.orders?.map(order => (
         <OrderListItem key={order?._id} order={order} />
       )) : <span className="block text-center mt-5">আপনি কোন অর্ডার করেননি। </span>}
+
+      {isLoading && <Loader />}
 
     </div>
   );
