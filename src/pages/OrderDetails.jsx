@@ -12,7 +12,6 @@ export default function OrderDetails() {
     if (isLoading) return <Loader />
     if (error) throw new Error(error)
 
-        console.log(data)
     return (
         <div className="max-w-xl text-slate-700 p-4 mx-auto">
             <h1 className="heading">অর্ডারের বিস্তারিত</h1>
