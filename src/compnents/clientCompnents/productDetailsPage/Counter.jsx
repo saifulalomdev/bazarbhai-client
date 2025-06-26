@@ -6,7 +6,7 @@ export default function Counter({ setQuantity  , quantity ,sm = false }) {
 
 
     return (
-        <div className={` border text-orange-400 border-orange-400 flex 
+        <div className={` border w-full text-orange-400 border-orange-400 flex 
              px-3 justify-around rounded-full text-sm 
             ${sm ? "w-[120px] mt-1" : " w-full"}`}>
             <button

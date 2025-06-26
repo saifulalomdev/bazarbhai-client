@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 import useCartStore from "../../../store/useCartStore";
 import Counter from "../../clientCompnents/productDetailsPage/Counter"
-import { IoMdRemoveCircleOutline } from "react-icons/io";
+import { AiOutlineDelete } from "react-icons/ai";
 import truncateText from "../../../helper/truncateText";
 
 
@@ -48,13 +48,12 @@ export default function CartItemCard({ item }) {
                 </div>
                 {/* ============ counter and delete button ==== */}
                 <div className="flex gap-3 justify-between items-center">
-                    <Counter sm quantity={quantity} setQuantity={setQuantity} />
+                    <Counter sm quantity={quantity} setQuantity={setQuantity}  />
                     <div
                         onClick={() => removeItem(item?._id, item?.size, item?.colour)}
-                        className="border w-1/2 text-xl cursor-pointer py-1 flex justify-center rounded-full text-red-500 border-red-400">
-                        <IoMdRemoveCircleOutline />
+                        className="border w-[40%] text-xl -mb-1 cursor-pointer py-1 flex justify-center rounded-full text-red-500 border-red-400">
+                        <AiOutlineDelete />
                     </div>
-
                 </div>
             </div>
         </div>
