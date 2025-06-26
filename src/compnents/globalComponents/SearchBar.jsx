@@ -26,7 +26,7 @@ export default function SearchBar({ baseUrl }) {
 
     function handleClear() {
         setSearchTerms("")
-        if (location.pathname === baseUrl) {
+        if (location.pathname === baseUrl && !searchTerms) {
             navigate(baseUrl);
         }
     }
