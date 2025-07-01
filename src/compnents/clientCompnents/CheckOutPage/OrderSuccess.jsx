@@ -10,12 +10,10 @@ export default function OrderSuccess({ data }) {
     const navigate = useNavigate()
 
     function handleClick() {
-       
         const orderId = data?.orderId;
-         console.log(orderId)
         navigate(`/order/${orderId}`)
     }
-    
+
     return (
         <div
             style={{ height: height ? height - 140 : "100vh" }}

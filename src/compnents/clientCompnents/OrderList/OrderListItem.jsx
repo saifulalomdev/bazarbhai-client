@@ -4,7 +4,7 @@ export default function OrderListItem({ order }) {
 
   const orderStatus = order?.orderStatus;
   const paymentStatus = order?.paymentStatus;
-  const failed = paymentStatus === "ব্যার্থ" || orderStatus === "ব্যার্থ" 
+  const failed = paymentStatus === "ব্যার্থ" || orderStatus === "ব্যার্থ"
 
   return (
     <Link to={`/order/${order?._id}`}>
@@ -14,16 +14,12 @@ export default function OrderListItem({ order }) {
         </div>
         <div className="w-full border font-bold py-1 rounded border-gray-300 text-sm px-3 items-center">
           <h1>সময়ঃ <span className="ml-2 font-normal">{order?.createdAt}</span></h1>
-          <h1>অর্ডার স্ট্যাটাসঃ
+          <h1>অর্ডারঃ
             <span className={`ml-2 font-normal ${failed ? "text-red-500" : ""}`}>
               {order?.orderStatus}
             </span>
           </h1>
-          <h1>পেমেন্ট স্ট্যাটাসঃ
-            <span className={`ml-2 font-normal ${failed ? "text-red-500" : ""}`}>
-              {order?.paymentStatus}
-            </span>
-          </h1>
+          <h1>পেমেন্টঃ <span className="font-normal">ডেলিভারির সময় টাকা দিন ❤️</span></h1>
         </div>
       </div>
     </Link>
