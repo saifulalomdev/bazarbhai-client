@@ -9,7 +9,6 @@ import DeliveryOptions from "../compnents/clientCompnents/CheckOutPage/DeliveryO
 import CalculateDeliverCostFromWeight from "../helper/CalculateDeliverCostFromWeight";
 import OrderSuccess from "../compnents/clientCompnents/CheckOutPage/OrderSuccess";
 import { Navigate } from "react-router-dom";
-import PaymentMethod from "../compnents/clientCompnents/CheckOutPage/PaymentMethod";
 
 export default function CheckOutPage() {
 
@@ -21,9 +20,6 @@ export default function CheckOutPage() {
   //shiping address
   const [shippingAddress, setShippingAddress] = useState({})
 
-  // payment method
-  const [paymentMethod, setPaymentMethod] = useState("নগদ")
-
   // selected delivery option 
   const [selectedDeliveryOption, setSelectedDeliveryOption] = useState({
     name: "রেগুলার", cost: CalculateDeliverCostFromWeight(totalWeight), duration: "৪ ঘন্টা"
@@ -34,7 +30,6 @@ export default function CheckOutPage() {
   const order = {
     cart,
     shippingAddress,
-    paymentMethod,
     deliveryOption: selectedDeliveryOption
   }
 
@@ -53,9 +48,7 @@ export default function CheckOutPage() {
         selectedDeliveryOption={selectedDeliveryOption}
         setSelectedDeleveryOption={setSelectedDeliveryOption}
       />
-      <PaymentMethod paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod} />
       <OrderSummery
-        paymentMethod={paymentMethod}
         deliveryCost={selectedDeliveryOption?.cost}
       />
       <Button

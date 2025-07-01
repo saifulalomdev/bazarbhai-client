@@ -26,10 +26,11 @@ export default function OrderList() {
       </div>
 
       {/* ======== render data ========= */}
-      {data?.orders?.length > 0 ? data?.orders?.map(order => (
+      {data?.orders?.length > 0 && data?.orders?.map(order => (
         <OrderListItem key={order?._id} order={order} />
-      )) : <span className="block text-center mt-5">আপনি কোন অর্ডার করেননি। </span>}
+      ))}
 
+      {!isLoading && data?.orders?.length < 0 && <span className="block text-center mt-5">আপনি কোন অর্ডার করেননি। </span>}
       {isLoading && <Loader />}
 
     </div>
