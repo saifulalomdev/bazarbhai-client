@@ -16,7 +16,7 @@ export function usePlaceOrder() {
     async function placeOrder(order) {
         try {
             setIsLoading(true)
-            const res = await bazarBhaiApi.post("/api/orders", order)
+            const res = await bazarBhaiApi.post("/orders", order)
             setData(res.data)
             clearCart()
         } catch (error) {

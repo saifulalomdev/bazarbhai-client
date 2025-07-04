@@ -1,7 +1,7 @@
 import bazarBhaiApi from "../config/axios";
 
 export async function getLandingPageData() {
-   const res = await bazarBhaiApi.get("/api/landing-page")
+   const res = await bazarBhaiApi.get("/landing-page")
    return res?.data
 }
 

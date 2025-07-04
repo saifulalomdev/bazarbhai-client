@@ -3,17 +3,15 @@ import axios from "axios";
 const bazarBhaiApi = axios.create({
     baseURL: import.meta.env.VITE_BAZAR_BHAI_API_URL,
     headers: {
-        "Content-Type": "application/json",
-        token: localStorage.getItem("token")
-
+        "Content-Type": "application/json"
     }
 
 })
 
 bazarBhaiApi.interceptors.request.use((config) => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("authToken");
     if (token) {
-        config.headers.token = token;
+        config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
 });

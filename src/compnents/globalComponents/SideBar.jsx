@@ -5,11 +5,9 @@ import SettingsOption from "./SettingsOption"
 export const useSideBarToggle = createGlobalState(false)
 import { MdContactPhone } from "react-icons/md";
 
-
 const settingsItem = [
     { Icon: <MdContactPhone />, text: "যোগাযোগ", path: "/contact-us" },
 ]
-
 
 export default function SideBar() {
     const [isOpen, setIsOpen] = useSideBarToggle()

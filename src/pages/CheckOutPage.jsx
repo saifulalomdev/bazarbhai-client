@@ -35,7 +35,7 @@ export default function CheckOutPage() {
 
   if (data) return <OrderSuccess data={data} />
 
-  if (!localStorage.getItem("token")) return <Navigate to="/sign-in" />
+  if (!localStorage.getItem("authToken")) return <Navigate to="/sign-in" />
 
   return (
     <div className="p-4 select-none max-w-xl mx-auto">

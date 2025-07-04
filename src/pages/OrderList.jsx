@@ -12,7 +12,7 @@ export default function OrderList() {
 
   if (error) throw new Error(error)
 
-  if (!localStorage.getItem("token")) return <Navigate to="/" />
+  if (!localStorage.getItem("authToken")) return <Navigate to="/" />
 
   return (
     <div className="max-w-2xl mx-auto p-4">

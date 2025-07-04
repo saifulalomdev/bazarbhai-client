@@ -10,7 +10,7 @@ export default function SettingsOption({ path, text, Icon }) {
         setIsOpen(false)
         if (!path) return
         if (path === "/sign-out") {
-            localStorage.removeItem("token")
+            localStorage.removeItem("authToken")
             return
         }
         navigate(path)

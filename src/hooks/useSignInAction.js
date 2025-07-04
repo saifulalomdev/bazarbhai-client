@@ -10,10 +10,11 @@ export default function useSignInAction() {
 
     async function handleSignIn(phoneNumber) {
         try {
-            setIsSigning(true)
+            setIsSigning(true);
             const res = await bazarBhaiApi
-                .post("/api/users/sign-in", { phoneNumber })
-            localStorage.setItem("token", res.data.token)
+                .post("/users/sign-in", { phoneNumber });
+
+            localStorage.setItem("authToken", res.data.authToken);
             navigate("/cart", { replace: true })
         } catch (error) {
             handleError(error, setError)
