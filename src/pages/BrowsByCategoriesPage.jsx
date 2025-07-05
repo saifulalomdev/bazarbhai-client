@@ -19,6 +19,7 @@ export default function BrowsByCategoriesPage() {
           <CategoryCard href={`/shop?category=${cat?._id}`} key={cat?._id} category={cat} />
         ))}
       </div>
+      {data?.length === 0 && <p className="text-sm text-center mt-5">এই ক্যাটাগরির সাব ক্যাটাগরি নেই</p>}
     </div>
   )
 }
