@@ -12,6 +12,8 @@ import OrderList from "../pages/OrderList";
 import OrderDetails from "../pages/OrderDetails";
 import SignIn from "../pages/SignIn";
 import ContactUs from "../pages/ContactUs";
+import DeliveryPolicy from "../pages/DeliveryPolicy";
+import PrivecyPolicy from "../pages/PrivecyPolicy";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +29,8 @@ const router = createBrowserRouter([
             { path: "check-out", element: <CheckOutPage /> },
             { path: "orders", element: <OrderList /> },
             { path: "contact-us", element: <ContactUs /> },
+            { path: "delivery-policy", element: <DeliveryPolicy /> },
+            { path: "privery-policy", element: <PrivecyPolicy /> },
             { path: "order/:orderId", element: <OrderDetails /> },
         ]
     },

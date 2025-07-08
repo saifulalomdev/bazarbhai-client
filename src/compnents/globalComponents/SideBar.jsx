@@ -4,9 +4,13 @@ import { createGlobalState } from "react-use"
 import SettingsOption from "./SettingsOption"
 export const useSideBarToggle = createGlobalState(false)
 import { MdContactPhone } from "react-icons/md";
+import { FaShippingFast } from "react-icons/fa";
+import { TbFileDescription } from "react-icons/tb";
 
 const settingsItem = [
     { Icon: <MdContactPhone />, text: "যোগাযোগ", path: "/contact-us" },
+    { Icon: <FaShippingFast />, text: "ডেলিভারি নীতি", path: "/delivery-policy" },
+    { Icon: <TbFileDescription />, text: "প্রাইভেসি পলিসি", path: "/privery-policy" },
 ]
 
 export default function SideBar() {

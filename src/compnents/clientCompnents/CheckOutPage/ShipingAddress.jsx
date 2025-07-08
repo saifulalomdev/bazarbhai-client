@@ -19,7 +19,7 @@ export default function ShipingAddress({ setShippingAddress }) {
             <h1 className="heading">আপনার ঠিকানা</h1>
             <InputField
                 label="আপনার নাম"
-                placeholder="সাইফুল আলম"
+                placeholder="আপনার নাম"
                 name="name"
                 onChange={handleChange}
             />
