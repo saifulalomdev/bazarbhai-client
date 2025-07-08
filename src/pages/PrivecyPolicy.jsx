@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom'
+
 export default function PrivecyPolicy() {
     return (
         <div className="p-4 max-w-3xl mx-auto my-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">🔒 গোপনীয়তা নীতি</h2>
 
             <p className="text-gray-700 mb-4">
-                <strong>BazarBhai.com</strong> গ্রাহকদের তথ্যের গোপনীয়তা রক্ষা করতে প্রতিশ্রুতিবদ্ধ। আপনার ব্যক্তিগত তথ্য আমাদের কাছে নিরাপদ এবং কেবলমাত্র সেবার মান উন্নয়নের জন্য ব্যবহৃত হয়।
+                <strong>bazarbhai.com (বাজারভাই ডট কম)</strong> গ্রাহকদের তথ্যের গোপনীয়তা রক্ষা করতে প্রতিশ্রুতিবদ্ধ। আপনার ব্যক্তিগত তথ্য আমাদের কাছে নিরাপদ এবং কেবলমাত্র সেবার মান উন্নয়নের জন্য ব্যবহৃত হয়।
             </p>
 
             <ol className="list-decimal list-inside text-gray-700 space-y-2">
@@ -26,8 +28,11 @@ export default function PrivecyPolicy() {
             </ol>
 
             <p className="text-gray-700 mt-4">
-                আপনার গোপনীয়তা আমাদের কাছে গুরুত্বপূর্ণ। যদি আপনার কোনো প্রশ্ন বা উদ্বেগ থাকে, অনুগ্রহ করে আমাদের সাথে 
-                <a href="/contact-us" className="text-blue-400 underline ml-3 underline-offset-4">যোগাযোগ করুন</a> ।
+                আপনার গোপনীয়তা আমাদের কাছে গুরুত্বপূর্ণ। যদি আপনার কোনো প্রশ্ন বা উদ্বেগ থাকে, অনুগ্রহ করে আমাদের সাথে
+
+                <Link to="/contact-us" className='text-blue-400 underline ml-1 underline-offset-4'>
+                    যোগাযোগ করুন
+                </Link> ।
             </p>
         </div>
     )
