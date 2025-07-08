@@ -4,7 +4,7 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 
 export default function Commitment() {
     return (
-        <div className="mt-10 mb-6 grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="mt-10 mb-6 grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="flex flex-col items-center">
                 <FaShippingFast className="w-16 h-16 text-white p-2 rounded-full border-8 border-gray-300 bg-slate-800" />
                 <h1 className="text-lg">নির্দিষ্ট সময়ে অর্ডার ডেলিভারি</h1>
