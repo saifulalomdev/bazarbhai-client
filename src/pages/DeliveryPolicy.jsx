@@ -3,7 +3,7 @@ import { MdLocationPin } from "react-icons/md";
 
 export default function DeliveryPolicy() {
     return (
-        <div className="p-4">
+        <div className="p-4 max-w-xl mx-auto">
             <h2 className="text-xl font-bold flex gap-3 items-center text-gray-800 mb-4">
                 <FaShippingFast /> ডেলিভারি নীতি
             </h2>
@@ -26,11 +26,10 @@ export default function DeliveryPolicy() {
             </h2>
 
             {/* deliver area */}
-            <ol className="list-inside ">
-                <h1 className="text-lg font-bold" >জকিগঞ্জ</h1>
-                <h1 className="text-lg font-bold" >ঈদগাহ বাজার</h1>
+            <ol className="list-inside">
+                <h1 className="text-lg" >জকিগঞ্জ</h1>
+                <h1 className="text-lg" >ঈদগাহ বাজার</h1>
             </ol>
-
         </div>
     )
 }

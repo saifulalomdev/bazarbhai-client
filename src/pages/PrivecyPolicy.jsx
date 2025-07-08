@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function PrivecyPolicy() {
     return (
-        <div className="p-4 max-w-3xl mx-auto">
+        <div className="p-4 max-w-xl mx-auto">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">🔒 গোপনীয়তা নীতি</h2>
 
             <p className="text-gray-700 mb-4">
