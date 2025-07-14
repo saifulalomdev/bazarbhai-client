@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import { FaPhoneFlip } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
+import { FiPhoneCall } from "react-icons/fi";
+
 
 const contactInfo = [
-    { img: "/images/imo.webp", href: "imo://chat?phone=8801935679071" },
-    { img: "/images/whatsapp.png", href: "https://wa.me/8801935679071" },
+    { Icon: <FiPhoneCall />, href: "tel:01935679071" },
+    { Icon: <FaWhatsapp />, href: "imo://chat?phone=8801935679071" },
 ]
 
 function ChatSupport() {
@@ -13,14 +16,12 @@ function ChatSupport() {
     return (
         <>
             {isShow &&
-                <div className="fixed shadow px-2 py-1 border border-gray-300 rounded-xl bg-white bottom-35 w-16 right-5">
+                <div className="fixed shadow flex flex-col gap-1 px-2 py-1 border border-gray-300 rounded-xl bg-white bottom-35 w-16 right-5">
                     {contactInfo?.map(item => (
-                        <a href={item.href} key={item?.img}>
-                            <img src={item?.img} className="w-16 rounded mt-1 border border-gray-200 cursor-pointer h-16 object-contain" key={item?.img} alt="Whats app" />
-                        </a>
+                        <ReachOutButton onClick={()=> window.location.href = item.href} Icon={item.Icon} />
                     ))}
                 </div>}
-            <ReachOutButton onClick={()=> setIsShow(p => !p)} className="fixed bottom-20 right-5" Icon={<FaPhoneFlip />} />
+            <ReachOutButton onClick={() => setIsShow(p => !p)} className="fixed bottom-20 right-5" Icon={<FaPhoneFlip />} />
         </>
     )
 }
