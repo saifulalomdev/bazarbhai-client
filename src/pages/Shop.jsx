@@ -6,6 +6,7 @@ import ProductCard from "../compnents/globalComponents/ProductCard"
 import { VirtuosoGrid } from "react-virtuoso"
 import { useState } from "react"
 import ClearCategoryFilter from "../compnents/clientCompnents/homePage/ClearCategoryFilter"
+import ChatSupport from "../compnents/globalComponents/ChatSupport"
 
 const options = [
   { _id: "lowPrice", name: "দাম কম থেকে বেশি" },
@@ -59,7 +60,7 @@ export default function Shop() {
         }}
       />
       {isFetching && <Loader />}
-      {!hasMore && !isFetching && <span className='text-center block mt-5 text-2xl'>প্রোডাক্ট নেই</span>}
+      <ChatSupport/>
     </div>
   );
 }
