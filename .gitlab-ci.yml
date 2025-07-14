@@ -1,7 +1,6 @@
-image: node:20
+image: node:20-alpine
 
 stages:
-  - build
   - deploy
 
 cache:
@@ -11,18 +10,11 @@ cache:
 before_script:
   - npm install -g firebase-tools
 
-build:
-  stage: build
-  script:
-    - npm install
-    - npm run build
-  artifacts:
-    paths:
-      - dist
-
 deploy:
   stage: deploy
   script:
+    - npm install
+    - npm run build
     - firebase deploy --only hosting --token "$FIREBASE_DEPLOY_TOKEN"
   only:
     - main
