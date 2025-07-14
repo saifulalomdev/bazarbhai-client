@@ -3,7 +3,6 @@ import SelectOptions from "../../globalComponents/SelectOptions"
 import DescriptionField from "../../globalComponents/DescriptionField"
 
 const options = [
-    { _id: "জকিগঞ্জ", name: "জকিগঞ্জ" },
     { _id: "ঈদগাহ বাজার ", name: "ঈদগাহ বাজার" },
 ]
 

@@ -7,8 +7,8 @@ export default function DeliveryOptions({ selectedDeliveryOption, setSelectedDel
     const totalWeight = useCartStore(state => state.totalWeight)
 
     const deliveryOptionsData = [
-        { name: "রেগুলার", cost: CalculateDeliverCostFromWeight(totalWeight), duration: "৪ ঘন্টা" },
-        { name: "এক্সপ্রেস", cost: CalculateDeliverCostFromWeight(totalWeight) + 30, duration: "২ ঘন্টা" }
+        { name: "রেগুলার", cost: CalculateDeliverCostFromWeight(totalWeight), duration: "২ ঘন্টা" },
+        { name: "এক্সপ্রেস", cost: CalculateDeliverCostFromWeight(totalWeight) + 30, duration: "১ ঘন্টা" }
     ]
 
 
@@ -29,7 +29,7 @@ export default function DeliveryOptions({ selectedDeliveryOption, setSelectedDel
                 // this is wraper div statrt
                 <div key={option.name}
                     onClick={() => setSelectedDeleveryOption(option)}
-                    className={`p-3 border border-gray-300 flex gap-3 items-center cursor-pointer rounded last:mt-2 
+                    className={`p-2 border border-gray-300 flex gap-1 items-center cursor-pointer rounded last:mt-2 
                    ${option.name === selectedDeliveryOption?.name ? "bg-blue-100 " : ""}`}>
 
                     {/* ======== this div is for circle ========= */}
