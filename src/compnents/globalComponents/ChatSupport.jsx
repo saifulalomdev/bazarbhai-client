@@ -6,7 +6,7 @@ import { FiPhoneCall } from "react-icons/fi";
 
 const contactInfo = [
     { Icon: <FiPhoneCall />, href: "tel:01935679071" },
-    { Icon: <FaWhatsapp />, href: "imo://chat?phone=8801935679071" },
+    { Icon: <FaWhatsapp />, href: "https://wa.me/8801935679071" },
 ]
 
 function ChatSupport() {
@@ -16,7 +16,7 @@ function ChatSupport() {
     return (
         <>
             {isShow &&
-                <div className="fixed shadow flex flex-col gap-1 px-2 py-1 border border-gray-300 rounded-xl bg-white bottom-35 w-16 right-5">
+                <div className="fixed shadow flex flex-col gap-4 px-2 py-3 border border-gray-300 rounded-xl bg-white bottom-35 w-16 right-5">
                     {contactInfo?.map(item => (
                         <ReachOutButton onClick={()=> window.location.href = item.href} Icon={item.Icon} />
                     ))}
