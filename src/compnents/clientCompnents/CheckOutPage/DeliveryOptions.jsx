@@ -8,7 +8,7 @@ export default function DeliveryOptions({ selectedDeliveryOption, setSelectedDel
 
     const deliveryOptionsData = [
         { name: "রেগুলার", cost: CalculateDeliverCostFromWeight(totalWeight), duration: "২ ঘন্টা" },
-        { name: "এক্সপ্রেস", cost: CalculateDeliverCostFromWeight(totalWeight) + 30, duration: "১ ঘন্টা" }
+        { name: "এক্সপ্রেস", cost: CalculateDeliverCostFromWeight(totalWeight) + 20, duration: "১ ঘন্টা" }
     ]
 
 

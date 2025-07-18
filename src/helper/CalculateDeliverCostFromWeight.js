@@ -1,6 +1,8 @@
 export default function CalculateDeliverCostFromWeight(kg) {
 
-    if (kg <= 10) {
+    if (kg <= 5) {
+        return 30;
+    } else if (kg <= 10) {
         return 40;
     } else if (kg <= 20) {
         return 60;
@@ -9,6 +11,6 @@ export default function CalculateDeliverCostFromWeight(kg) {
     } else if (kg <= 50) {
         return 100;
     } else {
-        return 120; 
+        return 120;
     }
 }

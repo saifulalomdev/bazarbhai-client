@@ -31,7 +31,7 @@ export default function ShipingAddress({ setShippingAddress }) {
             />
             <InputField
                 type="tel"
-                label="ইমার্জেন্সি ফোন নাম্বার"
+                label="ইমার্জেন্সি ফোন নাম্বার (অপশনাল)"
                 placeholder="01xxxxxxxxx"
                 name="secondPhoneNumber"
                 onChange={handleChange}
