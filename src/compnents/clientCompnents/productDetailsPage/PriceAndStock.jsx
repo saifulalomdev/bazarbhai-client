@@ -1,17 +1,17 @@
-export default function PriceAndStock({variant}) {
+export default function PriceAndStock({variant , quantity = 1}) {
   return (
     <div className="flex justify-between pt-3 border-b border-gray-300 pb-3 items-center w-full">
                 {variant?.salePrice ?
                     <div>
                         <span className="text-2xl mr-1">
-                            {variant?.salePrice}৳
+                            {variant?.salePrice * quantity}৳
                         </span>
                         <span className="text-xl text-gray-400 line-through">
-                            {variant?.regularPrice}৳
+                            {variant?.regularPrice * quantity}৳
                         </span>
                     </div> :
                     <span className="text-2xl mr-1">
-                        {variant?.regularPrice}৳
+                        {variant?.regularPrice * quantity}৳
                     </span>}
 
                 {/* ========= stock ============ */}

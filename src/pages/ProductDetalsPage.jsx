@@ -68,8 +68,15 @@ export default function ProductDetails() {
         });
     };
 
-    if (isLoading || !selectedVariant) return <Loader />;
-    if (error) throw new Error(error.message)
+    if (isLoading) return <Loader />;
+    if (error) {
+        if (error?.status === 404) {
+            return <p className="text-xl text-center mt-5 text-red-500">এখন, এই পণ্যটি আমাদের কাছে নেই।</p>
+        } else {
+            throw new Error(error.message)
+        }
+
+    }
 
     return (
         <div className="container text-slate-700 mx-auto p-4">
@@ -89,7 +96,7 @@ export default function ProductDetails() {
                         selectedColour={selectedColour}
                         setSelectedColour={setSelectedColour}
                     />
-                    <PriceAndStock variant={selectedVariant} />
+                    <PriceAndStock quantity={quantity} variant={selectedVariant} />
                     <div className="flex gap-5 mt-5">
                         {/* Quantity Counter */}
                         <Counter quantity={quantity} setQuantity={setQuantity} />
