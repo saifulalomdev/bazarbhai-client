@@ -16,24 +16,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
+      # 1. Install pnpm first
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9
 
-      - name: Install dependencies
-        run: pnpm install
+      # 2. Install Node and enable caching for pnpm speeds
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
 
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # 3. Use pnpm consistently for the build step
       - name: Build Vite App
-        run: npm run build
+        run: pnpm run build
         env: 
           VITE_BAZAR_BHAI_API_URL: https://api.bb.saifulalom.com
 
+      # 4. Deploy the build output
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
