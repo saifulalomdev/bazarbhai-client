@@ -25,7 +25,7 @@ jobs:
           cache-dependency-path: 'pnpm-lock.yaml'
 
       - name: Install Application Dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Build Vite App
         run: pnpm run build
