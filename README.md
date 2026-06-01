@@ -27,6 +27,7 @@ This repository contains the decoupled user-facing React application designed to
 
 > ⚠️ **Hosting Notice:** The live demonstration environment runs on a shared, sleeping server infrastructure to minimize operational hosting overhead. The initial network handshake may take **30–60 seconds** to wake up the server instance.
 >
+
 > 🔒 **Access Management:** To ensure strict data privacy and structural security, the live production pathways for our complementary **Seller Dashboard** and **Admin Panel** have been restricted. Because those operational platforms processed active merchant transactions and live customer records, keeping active interfaces gated protects foundational user privacy.
 
 ---
