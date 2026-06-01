@@ -94,7 +94,7 @@ Make sure you have `pnpm` installed globally, then instantiate package managemen
 Create a `.env.local` file at the root of the project to point the frontend bundle to your running local backend:
 
 ```env
-   VITE_API_URL=http://localhost:5000
+   VITE_BAZAR_BHAI_API_URL=http://localhost:5000
 
 ```
 
