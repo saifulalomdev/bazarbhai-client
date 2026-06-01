@@ -7,30 +7,25 @@ on:
 
 jobs:
   deploy:
+    name: Run Tests and Deploy Application
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-
     steps:
-      - name: Checkout code
+      - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      # 1. Install PNPM first 👈 ADD THIS STEP
-      - name: Install pnpm
+      - name: Setup Package Manager (pnpm)
         uses: pnpm/action-setup@v4
         with:
-          version: 9 # Forces a stable version of pnpm
+          version: 9
 
-      # 2. Setup Node and let it cache pnpm dependencies
-      - name: Install Node.js
+      - name: Setup Node.js Runtime Environment
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm' # Now this will work seamlessly
+          cache-dependency-path: 'pnpm-lock.yaml'
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile # Replaces npm ci
+      - name: Install Application Dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Build Vite App
         run: pnpm run build
